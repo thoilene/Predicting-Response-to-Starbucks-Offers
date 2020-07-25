@@ -41,4 +41,7 @@ This repository contains basically a Jupyter notebook and a subfolder for data:
 
 The results of this project are presented in the section "Conclusion" of the Jupyter notebook Starbucks_Capstone_notebook.ipynb. The conclusion is a summary of the answers to the business questions asked above. 
 The main technical challenge of this project is the logical combination of transactional data. As offers have been received 66501 times, this is the amount of records which have to be combined to all other data. The runtime of the corresponding routine is relatively long. 
-The predictive model built in this project
+
+The predictive model built in this project for predicting the response of a user to an offer demonstrates a performance of 81.41% accuracy on training data and 71.80% accuracy on test data.
+
+However, the performance results achieved in this project could be improved using different machine learning techniques like parameter tuning or the use of other classification models.
