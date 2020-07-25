@@ -30,7 +30,7 @@ The answers to these questions could help the company in various ways. By avoidi
 
 # Files in the Repository
 - Starbucks_Capstone_notebook.ipynb: Jupyter notebook containing the code and all steps of the project including business understanding, data understanding, data preparation, model building, model evaluation and conclusion.
-- Data files:
+- /data (subfolder for data files):
   - portfolio.json: offer data (offer type, rewards, duration, etc...)
   - profile.json: user data (age, income, gender)
   - transcript.zip: contains transactional data in .json-format
