@@ -1,7 +1,7 @@
 # Starbucks-Capstone-Challenge
 
-- This is a project in the context of the Nanodegree program "Data Science"
-- It intends to show the ability of the student to apply data science methodology and machine learning techniques in business.
+- This is the final project in the context of the Nanodegree program "Data Science"
+- It intends to show the ability of the student to apply data science methodology and machine learning techniques in business real life.
 
 # Requirements
 The following libraries have been used for this project under Anaconda distribution:
@@ -29,6 +29,8 @@ Other questions concerning the business could be adressed in this context as the
 The answers to these questions could help the company in various ways. By avoiding sending offers to users who are less likely to respond, the company could save advertising costs. This would also allow the company to work more efficiently by targeting those people who are more likely to respond to certain offers. 
 
 # Files in the Repository
+
+This repository contains basically a Jupyter notebook and a subfolder for data:
 - Starbucks_Capstone_notebook.ipynb: Jupyter notebook containing the code and all steps of the project including business understanding, data understanding, data preparation, model building, model evaluation and conclusion.
 - /data (subfolder for data files):
   - portfolio.json: offer data (offer type, rewards, duration, etc...)
@@ -36,4 +38,7 @@ The answers to these questions could help the company in various ways. By avoidi
   - transcript.zip: contains transactional data in .json-format
 
 # Results
-Please find the results in the Jupyter notebook "Write A Data Science Blog Post.ipynb" in this repository and a summary of the results in the blog post https://thomasilene.wixsite.com/website/post/seattle-airbnb-listings-main-price-drivers for a non-technical audience.
+
+The results of this project are presented in the section "Conclusion" of the Jupyter notebook Starbucks_Capstone_notebook.ipynb. The conclusion is a summary of the answers to the business questions asked above. 
+The main technical challenge of this project is the logical combination of transactional data. As offers have been received 66501 times, this is the amount of records which have to be combined to all other data. The runtime of the corresponding routine is relatively long. 
+The predictive model built in this project
