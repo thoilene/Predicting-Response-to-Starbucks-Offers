@@ -13207,10 +13207,11 @@ div#notebook {
 <p>The Starbucks rewards app allows users to earn rewards when they pay through that app. The process of earning rewards consists of receiving, displaying and completing offers. One important issue concerns the responsiveness of app users who receive offers:</p>
 <ul>
 <li>Could the response of a given user to a given offer be precited ? Will a given user respond to a given offer ?</li>
-<li><p>What are the most importants factors when it is about to predict the responsiveness of a user to an offer ?</p>
-</li>
-<li><p>Which are the most accepted offers ?</p>
-</li>
+<li>What are the most importants factors when it is about to predict the responsiveness of a user to an offer ?</li>
+</ul>
+<p>Other questions concerning the business could be adressed in this context as they are closely related to the responsiveness of app users:</p>
+<ul>
+<li>Which are the most accepted offers ?</li>
 <li>Which are the most beneficial offers from the perspective of revenues ?</li>
 <li>What is the profile of the typical/ideal target user (age, income, gender) ?</li>
 </ul>
@@ -15611,7 +15612,7 @@ dtype: int64</pre>
    
 <span class="c1">#!python Multiprocess.py</span>
 
-<span class="c1">################################################################################################################</span>
+<span class="c1">###################################################################################################################</span>
 </pre></div>
 
     </div>
@@ -15629,7 +15630,7 @@ dtype: int64</pre>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Combining record 66501 of 66501 ...process: 0
-49 minutes 17 seconds
+50 minutes 50 seconds
 </pre>
 </div>
 </div>
@@ -15643,7 +15644,7 @@ dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">############### Read data from filesystem and put all together #################################################</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">############################################### Put all together ###################################################</span>
 
 <span class="c1"># merged_df = pd.read_csv(&quot;data/combined_data_0.csv&quot;) # data could also be read from filesystem </span>
 
@@ -16437,7 +16438,7 @@ Name: success_flag, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f306c004d30&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8c70845390&gt;</pre>
 </div>
 
 </div>
@@ -16505,7 +16506,7 @@ Name: success_flag, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f306beecfd0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8c7083eef0&gt;</pre>
 </div>
 
 </div>
@@ -16573,7 +16574,7 @@ Name: success_flag, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f306bee5128&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8c7086b3c8&gt;</pre>
 </div>
 
 </div>
@@ -16641,7 +16642,7 @@ Name: success_flag, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f306be850b8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8c707cdf60&gt;</pre>
 </div>
 
 </div>
@@ -16779,7 +16780,7 @@ Name: success_flag, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f306be11c88&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8c707a8400&gt;</pre>
 </div>
 
 </div>
@@ -16849,7 +16850,7 @@ Name: success_flag, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f306be15940&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8c706d70f0&gt;</pre>
 </div>
 
 </div>
@@ -17740,7 +17741,7 @@ Name: success_flag, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Modelling">4. Modelling<a class="anchor-link" href="#4.-Modelling">&#182;</a></h1>
+<h1 id="4.-Model-Building">4. Model Building<a class="anchor-link" href="#4.-Model-Building">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -18364,103 +18365,103 @@ F1 score on test data: 69.36%
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   1.5s
-[CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   1.4s
+<pre>[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   1.7s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
 [CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   1.5s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
 [CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   1.5s
+[CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
+[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   1.5s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.5s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.5s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.4s
+[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.5s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.5s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.7s
+[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=20, total=   1.5s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.3s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.6s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.2s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.5s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.2s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.6s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.4s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.5s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.2s
-[CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   3.0s
-[CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   2.9s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=1e-06, max_depth=20, total=   5.5s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
 [CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   3.1s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   2.9s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   3.1s
+[CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   3.0s
+[CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   3.2s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30 
 [CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=30, total=   3.0s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.6s
-[CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.7s
-[CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.6s
+[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.8s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
 [CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.8s
 [CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.6s
+[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.8s
+[CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
+[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   2.8s
+[CV] n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20 
+[CV]  n_estimators=50, min_samples_split=2, min_impurity_decrease=1e-06, max_depth=20, total=   3.0s
+[CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30 
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   3.1s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30 
 [CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   3.0s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30 
 [CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   3.0s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   2.9s
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   3.0s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   2.9s
-[CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   3.2s
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=0.0001, max_depth=30, total=   3.1s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.7s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.7s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.6s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20 
 [CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.5s
 [CV] n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=2, min_impurity_decrease=1e-05, max_depth=20, total=   4.6s
 [CV] n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40 
-[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.4s
 [CV] n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40 
-[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.4s
 [CV] n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40 
 [CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.5s
 [CV] n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40 
-[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.5s
 [CV] n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40 
-[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.3s
+[CV]  n_estimators=100, min_samples_split=4, min_impurity_decrease=1e-05, max_depth=40, total=   4.4s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20, total=   3.0s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20, total=   3.0s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20 
-[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20, total=   3.2s
+[CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20, total=   3.1s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20, total=   3.0s
 [CV] n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20 
 [CV]  n_estimators=100, min_samples_split=3, min_impurity_decrease=0.0001, max_depth=20, total=   3.0s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.1s
+[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.2s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.1s
+[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.2s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.1s
+[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.2s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.1s
+[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.2s
 [CV] n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20 
-[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.3s
+[CV]  n_estimators=50, min_samples_split=3, min_impurity_decrease=1e-05, max_depth=20, total=   2.5s
 </pre>
 </div>
 </div>
@@ -18471,7 +18472,7 @@ F1 score on test data: 69.36%
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=-1)]: Done  50 out of  50 | elapsed:  2.9min finished
+<pre>[Parallel(n_jobs=-1)]: Done  50 out of  50 | elapsed:  3.1min finished
 </pre>
 </div>
 </div>
@@ -18664,19 +18665,6 @@ After merging combined transactional data to profile and portfolio data, an expl
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
