@@ -45,3 +45,4 @@ The main technical challenge of this project is the logical combination of trans
 The predictive model built in this project for predicting the response of a user to an offer demonstrates a performance of 81.41% accuracy on training data and 71.80% accuracy on test data.
 
 However, the performance results achieved in this project could be improved using different machine learning techniques like parameter tuning or the use of other classification models.
+ 
