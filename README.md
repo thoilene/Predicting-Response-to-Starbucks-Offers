@@ -15,12 +15,18 @@ The following libraries have been used for this project under Anaconda distribut
 
 # Project motivation
 
-AirBnB is an online platform where people can list their space and where travelers can book unique accommodations anywhere in the world. The price paid for accommodation is a central topic for the users of AirBnB (hosts and travelers). In the context of Udacity's Data Scientist Nanodegree I have analyse the prices of AirBnB accommodation in Seattle. Following questions have been answered in this project:
+The Starbucks rewards app allows users to earn rewards when they pay through that app. The process of earning rewards consists of receiving, displaying and completing offers. One important issue concerns the responsiveness of app users who receive offers:
 
-What is the dependency between the number of available listings and times of year?
-What is the dependency between AirBnB prices and times of year?
-How well can AirBnB prices be predicted?
-What are the most important factors for the prediction of AirBnB prices?
+- Could the response of a given user to a given offer be precited ? Will a given user respond to a given offer ?
+- What are the most importants factors when it is about to predict the responsiveness of a user to an offer ?
+
+Other questions concerning the business could be adressed in this context as they are closely related to the responsiveness of app users:
+
+- Which are the most accepted offers ?
+- Which are the most beneficial offers from the perspective of revenues ?
+- What is the profile of the typical/ideal target user (age, income, gender) ?
+
+The answers to these questions could help the company in various ways. By avoiding sending offers to users who are less likely to respond, the company could save advertising costs. This would also allow the company to work more efficiently by targeting those people who are more likely to respond to certain offers. 
 
 # Files in the Repository
 Write A Data Science Blog Post.ipynb: Jupyter notebook containing the step of analysis and the code of the project
