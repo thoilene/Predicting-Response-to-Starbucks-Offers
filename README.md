@@ -31,9 +31,9 @@ The answers to these questions could help the company in various ways. By avoidi
 # Files in the Repository
 - Starbucks_Capstone_notebook.ipynb: Jupyter notebook containing the code and all steps of the project including business understanding, data understanding, data preparation, model building, model evaluation and conclusion.
 - Data files:
--- portfolio.json: offer data (offer type, rewards, duration, etc...)
--- profile.json: user data (age, income, gender)
--- transcript.zip: contains transactional data in .json-format
+  - portfolio.json: offer data (offer type, rewards, duration, etc...)
+  - profile.json: user data (age, income, gender)
+  - transcript.zip: contains transactional data in .json-format
 
 # Results
 Please find the results in the Jupyter notebook "Write A Data Science Blog Post.ipynb" in this repository and a summary of the results in the blog post https://thomasilene.wixsite.com/website/post/seattle-airbnb-listings-main-price-drivers for a non-technical audience.
