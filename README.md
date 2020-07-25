@@ -29,12 +29,11 @@ Other questions concerning the business could be adressed in this context as the
 The answers to these questions could help the company in various ways. By avoiding sending offers to users who are less likely to respond, the company could save advertising costs. This would also allow the company to work more efficiently by targeting those people who are more likely to respond to certain offers. 
 
 # Files in the Repository
-Write A Data Science Blog Post.ipynb: Jupyter notebook containing the step of analysis and the code of the project
-Data files:
-Seattle_calendar.zip: availability data for accommodations (in csv-format)
-Seattle_listings.zip: AirBnB listings of Seattle (in csv-format)
-Seattle_reviews.zip: Review data (in csv-format)
-keywords.csv: CSV file containing keyword information for movies movies_metadata.csv: CSV file containing all basic information for movies images directory
+- Starbucks_Capstone_notebook.ipynb: Jupyter notebook containing the code and all steps of the project including business understanding, data understanding, data preparation, model building, model evaluation and conclusion.
+- Data files:
+-- portfolio.json: offer data (offer type, rewards, duration, etc...)
+-- profile.json: user data (age, income, gender)
+-- transcript.zip: contains transactional data in .json-format
 
 # Results
 Please find the results in the Jupyter notebook "Write A Data Science Blog Post.ipynb" in this repository and a summary of the results in the blog post https://thomasilene.wixsite.com/website/post/seattle-airbnb-listings-main-price-drivers for a non-technical audience.
