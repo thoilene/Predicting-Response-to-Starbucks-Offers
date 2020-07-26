@@ -17,8 +17,8 @@ The following libraries have been used for this project under Anaconda distribut
 
 The Starbucks rewards app allows users to earn rewards when they pay through that app. The process of earning rewards consists of receiving, displaying and completing offers. One important issue concerns the responsiveness of app users who receive offers:
 
-- Could the response of a given user to a given offer be precited ? Will a given user respond to a given offer ?
-- What are the most importants factors when it is about to predict the responsiveness of a user to an offer ?
+- Could the response of a given user to a given offer be predicted ? Will a given user respond to a given offer ?
+- What are the most important factors when it is about to predict the responsiveness of a user to an offer ?
 
 Other questions concerning the business could be adressed in this context as they are closely related to the responsiveness of app users:
 
