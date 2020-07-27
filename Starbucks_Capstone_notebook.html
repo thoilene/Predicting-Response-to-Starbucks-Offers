@@ -13782,6 +13782,17 @@ dtype: int64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to clean portfolio data</span>
 <span class="k">def</span> <span class="nf">clean_portfolio_data</span><span class="p">(</span><span class="n">ldf</span><span class="p">):</span>
     
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    DESCRIPTION: This function cleans portfolio data. It splits channels and creates a column for each channel </span>
+<span class="sd">    </span>
+<span class="sd">    INPUT:</span>
+<span class="sd">    ldf - (pandas dataframe) containing the original portfolio data</span>
+<span class="sd">    </span>
+<span class="sd">    OUTPUT:</span>
+<span class="sd">    portfolio_clean  - (pandas dataframe) containing the clean portfolio data</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
     <span class="n">portfolio_clean</span> <span class="o">=</span> <span class="n">ldf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     
     <span class="c1"># Splitting channel values into columns</span>
@@ -14250,6 +14261,18 @@ dtype: int64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clean_profile</span><span class="p">(</span><span class="n">ldf</span><span class="p">):</span> 
+    
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    DESCRIPTION: This function cleans profile data. It removes null-values and extracts year and month from the date on which the user becamer member </span>
+<span class="sd">    </span>
+<span class="sd">    INPUT:</span>
+<span class="sd">    ldf - (pandas dataframe) containing the original profile data</span>
+<span class="sd">    </span>
+<span class="sd">    OUTPUT:</span>
+<span class="sd">    profile_clean  - (pandas dataframe) containing the clean profile data</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
     <span class="n">profile_clean</span> <span class="o">=</span> <span class="n">ldf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">profile</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
@@ -14402,7 +14425,6 @@ dtype: int64</pre>
 <ol>
 <li>Removing all records with wrong profiles (as described above)</li>
 <li>Extracting value type and offer id from column "value"</li>
-<li>Extracting event - one hot encoding </li>
 </ol>
 
 </div>
@@ -14593,6 +14615,17 @@ dtype: int64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to clean transcript data</span>
 <span class="k">def</span> <span class="nf">clean_transcript</span><span class="p">(</span><span class="n">ldf</span><span class="p">):</span>
+    
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    DESCRIPTION: This function cleans transcript data. It removes data with wrong profiles, splits the value-columns </span>
+<span class="sd">    </span>
+<span class="sd">    INPUT:</span>
+<span class="sd">    ldf - (pandas dataframe) containing the original transcript data</span>
+<span class="sd">    </span>
+<span class="sd">    OUTPUT:</span>
+<span class="sd">    transcript_clean  - (pandas dataframe) containing the clean transcript data</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
 
     <span class="n">transcript_clean</span> <span class="o">=</span> <span class="n">ldf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
@@ -15516,6 +15549,25 @@ dtype: int64</pre>
 
 <span class="k">def</span> <span class="nf">merge_data_logically</span><span class="p">(</span><span class="n">portfolio_clean</span><span class="p">,</span> <span class="n">profile_clean</span><span class="p">,</span> <span class="n">df_transaction</span><span class="p">,</span> <span class="n">df_offer_completed</span><span class="p">,</span> <span class="n">df_offer_viewed</span><span class="p">,</span> <span class="n">df_offer_received</span><span class="p">,</span><span class="n">pid</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
            
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    DESCRIPTION: This following function merges transactions, received offers, viewed offers and completed offers logically with portfolio and profile data</span>
+<span class="sd">    </span>
+<span class="sd">    INPUT:</span>
+<span class="sd">    </span>
+<span class="sd">    ldf - (pandas dataframe) containing the original transcript data</span>
+<span class="sd">    portfolio_clean - clean profile data</span>
+<span class="sd">    profile_clean - clean portfolio data</span>
+<span class="sd">    df_transaction - transcript data for transactions</span>
+<span class="sd">    df_offer_completed - transcript data for received offers</span>
+<span class="sd">    df_offer_viewed - transcript data for viewed offers</span>
+<span class="sd">    df_offer_received - transcript data for received offers</span>
+<span class="sd">    pid - (int) process id - important when using multiprocessing</span>
+<span class="sd">    </span>
+<span class="sd">    OUTPUT:</span>
+<span class="sd">    df_all_offers  - (pandas dataframe) combined transcript data</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
     <span class="n">success_flag</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
 
     <span class="n">start_run</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16235,6 +16287,20 @@ Name: success_flag, dtype: int64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sort_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="s1">&#39;offer_id&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    DESCRIPTION: Helper function to sort data</span>
+<span class="sd">    </span>
+<span class="sd">    INPUT:</span>
+<span class="sd">    </span>
+<span class="sd">    data - (pandas dataframe) containing the original transcript data</span>
+<span class="sd">    col - alternative column for sorting items</span>
+<span class="sd">    id - basic column for sorting items</span>
+<span class="sd">    </span>
+<span class="sd">    OUTPUT:</span>
+<span class="sd">    data2  - (pandas dataframe) sorted data</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
     <span class="n">data_index</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">success_flag</span><span class="o">==</span><span class="s1">&#39;Yes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="n">col</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">ind_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data_index</span><span class="p">[</span><span class="n">id_</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">id_</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>
@@ -17748,7 +17814,24 @@ Name: success_flag, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Model-that-predicts-whether-or-not-someone-will-respond-to-an-offer">Model that predicts whether or not someone will respond to an offer<a class="anchor-link" href="#Model-that-predicts-whether-or-not-someone-will-respond-to-an-offer">&#182;</a></h2>
+<h3 id="Model-Choice:-random-forest-classifier-with-decision-tree-classifier-as-base-estimator">Model Choice: random forest classifier with decision tree classifier as base estimator<a class="anchor-link" href="#Model-Choice:-random-forest-classifier-with-decision-tree-classifier-as-base-estimator">&#182;</a></h3><p>The Model should predicts whether or not a user will respond to an offer. The data analysis above shows that some features (age, income, offer type) are particularily impacting the success of the interactions between user and offer. The decision tree classifier which is based on the "information gain technique" is an appropriate model when taking into account the  preceding analysis of the data. In order to optimize this choice, the random forest classifier using decision tree classifier as base estimator will be used. The random forest classifier uses a set of base estimation and this combination of many decision tree classifiers is expected to produce good results.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Performance-Metrics:-accuracy-as-main-metric-and-f1-score-as-confirmation-metric">Performance Metrics: accuracy as main metric and f1-score as confirmation metric<a class="anchor-link" href="#Performance-Metrics:-accuracy-as-main-metric-and-f1-score-as-confirmation-metric">&#182;</a></h3><p>The performance metrics for the predictive model to be develop are the model accuracy and the f1-score. 
+Accuracy is the main metric and f1-score is the secondary metric. The choice of "accuracy" is motivated by the fact that true positives and true negatives are the most important factors when predicting whether user will respond or not. This allows to target the right user when sending offers. The f1-score metric is used in this context only to confirm the accuracy performance and make sure that the model is stable enough. In this case f1-score should be at the same range as accuracy.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Building-the-model">Building the model<a class="anchor-link" href="#Building-the-model">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -17932,13 +18015,6 @@ Name: success_flag, dtype: int64</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Building-the-model">Building the model<a class="anchor-link" href="#Building-the-model">&#182;</a></h3>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18148,6 +18224,27 @@ Name: success_flag, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="5.-Model-Evaluation">5. Model Evaluation<a class="anchor-link" href="#5.-Model-Evaluation">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Naive-predictor">Naive predictor<a class="anchor-link" href="#Naive-predictor">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's make the following "naive" assumption when sending offers to the users: <strong><em>all users will respond to the offers.</em></strong></p>
+<p>===============================</p>
+<p>Total number of offers received: 66501</p>
+<p>Total number of responses: 32775 (49%)</p>
+<p>Total number of no response: 33726 (51%)</p>
+<p>===============================</p>
+<p>accuracy (of the naive prediction) = 32775 / 66501 = 49%</p>
+
 </div>
 </div>
 </div>
@@ -18637,9 +18734,10 @@ End of parameter selection...
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The central problem I have chosen to solve in this Starbucks Capstone Challenge is predicting the responsiveness of a user to a given offer sent through Starbuck reward app.</p>
-<p>The combination of transaction data, profile and portfolio data inevitably leads to the question of the predictability of the outcome of transactional interactions. The data preparation phase of this project was particularly challenging as different transactional interactions (receive, view, complete) have to be combined logically in order to replicate the right sense of the offer and transaction process. 
-After merging combined transactional data to profile and portfolio data, an exploratory analysis has made some insights visible. Hence, the questions asked in section 1. could be answered.</p>
-<p><strong>- Which are the most accepted offers ?</strong></p>
+<h3 id="Data-preparation-and-analysis">Data preparation and analysis<a class="anchor-link" href="#Data-preparation-and-analysis">&#182;</a></h3><p>The data preparation step had been focused on removing missing values, splitting complex data into columns and combining transcript data in a logical way which allows to assess successful user response.</p>
+<p>2175 profiles with wrong age, missing income and gender have been detected and removed. Transcript data have been combined to get successful responses only for those records received, viewed, completed or paid within the duration of the offer. The combination of the data here is the major challenge in the data preparation phase. 66501 entries have to be processed one by one, taking around 50 minutes runtime as python multiprocessing technique is not used in Jupyter notebook. The same could be achieved within 10 minutes with multiprocessing technique on regular python script.</p>
+<p>After merging combined transactional data to profile and portfolio data, an exploratory analysis has made some insights visible.  Hence, the questions asked in section 1. could be answered.</p>
+<h3 id="Results-and-answers-to-initial-questions">Results and answers to initial questions<a class="anchor-link" href="#Results-and-answers-to-initial-questions">&#182;</a></h3><p><strong>- Which are the most accepted offers ?</strong></p>
 <p>The following 3 offers have been mostly responded by users.They are the most accepted offers so far:</p>
 
 <pre><code>- fafdcd668e3743c1bb461111dcafc2a4
@@ -18657,19 +18755,17 @@ After merging combined transactional data to profile and portfolio data, an expl
 <p>The 2 most successful offers are of type "discount", have a duration of 7 or 10 days and reward of 2 or 3.</p>
 <p><strong>- What is the profile of the typical/ideal target user (age, income, gender) ?</strong></p>
 <p>The typical/ideal target user are basically those who respond to offers and allow for generating revenue. As seen in exploratory analysis, users aged between 40 and 70 years having an income between 50000 and 100000 are those who respond the most to different offers and generate the highest revenues. Women respond proportionally more than men and generated more revenue than men. It would make sens to invest in getting more women as member.</p>
-<p><strong>- Could the response of a given user to a given offer be precited ? Will a given user respond to a given offer ?</strong></p>
-<p>The predictive model build in this project is a classifier based on random forest logics.The best cross-validated model which is the one with the best average performance shows 81.41% accuracy on training data and 70.80% accuracy on test data. The f1-scores of 80.70% on training data and 69.45% on test data are at the same range as accuracy scores above. Hence, it could be predicted with at least 70.80% accuracy whether a user will respond to an offer or not.</p>
-<p><strong>- What are the most importants factors when it is about to predict the responsiveness of a user to an offer ?</strong></p>
-<p>The age and income of the users are the most important factors explaining the responsiveness of the users to different offers. However, the year/month where the user became a member expressing the loyality are also important role in this context. The use of social media also one of the 5 most important factors according to the model.</p>
-<p>However, the performance results achieved here could be improved using different machine learning techniques like parameter tuning or the use of other classification models.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A blog post on this project is published here:
+<p><strong>- Could the response of a given user to a given offer be predicted ? Will a given user respond to a given offer ?</strong></p>
+<p>The predictive model build in this project is a classifier based on random forest logics. The best cross-validated model which is the one with the best average performance shows 81.41% accuracy on training data and 70.80% accuracy on test data. The f1-scores of 80.70% on training data and 69.45% on test data are at the same range as accuracy scores above. Hence, it could be predicted with at least 70.80% accuracy whether a user will respond to an offer or not.</p>
+<p><strong><em>Interpretation:</em></strong> <em>81% accuracy of the model means that if the model is used to predict the reaction of the users in 100 cases to some offers, it will tell the truth in 81 cases. In comparison to that, the naive predictor defined above would tell the truth only in 49 cases out of 100.</em></p>
+<p><strong>- What are the most important factors when it is about to predict the responsiveness of a user to an offer ?</strong></p>
+<p>The age and income of the users are the most important factors explaining the responsiveness of the users to different offers. However, the year/month where the user became a member expressing the loyalty are also important role in this context. The use of social media also one of the 5 most important factors according to the model.</p>
+<h3 id="Predictive-model">Predictive model<a class="anchor-link" href="#Predictive-model">&#182;</a></h3><p>The random forest classifier of the sklearn library (with decision tree classifier as base estimator) has been chosen as predictive model in this project. The information gain technique of decision tree classifier combined with random forest technique was expected to be the most appropriate model as some features (like age, income, offer type) are particularily impacting the outcome of the prediction. 
+The random search cross-validation has been applied to choose the best random forest classifier. The cross-validated model as result of the random serch is more stable and slightly less overfitted than than the original model. The performance results of the model are summarized above in this section.</p>
+<h3 id="Future-model-improvement">Future model improvement<a class="anchor-link" href="#Future-model-improvement">&#182;</a></h3><p>However, the performance results achieved here could be improved using different machine learning techniques like parameter tuning or the use of other classification models.</p>
+<p>The use of neural networks or some other classifiers could help improving the performance. Deep learning techniques could also be investigated in this context. 
+Another improvement will follow by applying the recursive feature elimination (RFE). This will allow to eliminate those features which do not really improve the performance of the model.</p>
+<h3 id="References">References<a class="anchor-link" href="#References">&#182;</a></h3><p>A blog post on this project is published here:
 <a href="https://thomasilene.wixsite.com/website/post/starbuck-s-rewards-app-predicting-user-s-reaction-to-some-offers">https://thomasilene.wixsite.com/website/post/starbuck-s-rewards-app-predicting-user-s-reaction-to-some-offers</a></p>
 <p>A github repository for this project can be accessed via the link below.
 <a href="https://github.com/thoilene/Starbucks-Capstone-Challenge.git">https://github.com/thoilene/Starbucks-Capstone-Challenge.git</a></p>
