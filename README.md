@@ -1,4 +1,4 @@
-# Predicting Response to Starbucks offers - Using Machine Learning
+# Predicting Response to Starbucks Offers - Using Machine Learning
 
 ### Introduction
 
